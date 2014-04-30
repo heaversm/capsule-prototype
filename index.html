@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CAPSULE - CROSS BROWSER</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div id="container">
+    <div id="capture-container" class="toggleDisplay">
+        <canvas id="photo-canvas" class="toggleDisplay"></canvas>
+        <div id="webcam"></div>
+        <div id="file-buttons" class="toggleDisplay">
+            <input id="file-camera" class="toggleDisplay" type="file" name="camera" accept="image/*" capture="camera"></input>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input id="file-camcorder" class="toggleDisplay" type="file" name="camcorder" accept="video/*" capture="camcorder"></input>
+                <input id="file-camcorder-submit" type="submit" class="toggleDisplay" name="submit" value="Submit">
+            </form>
+        </div>
+        <div id="stream-buttons" class="toggleDisplay">
+            <button type="button" id="stream-camera" class="toggleDisplay">TAKE PICTURE</button>
+            <button type="button" id="stream-camcorder" class="toggleDisplay">TAKE VIDEO</button>
+        </div>
+        <div id="noflash" class="toggleDisplay">Please <a href="http://get.adobe.com/flashplayer/" target="_blank">install Flash</a>, then revisit this page, or <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to one which doesn't require flash</div>
+    </div>
+    <div id="intro-container" class="toggleDisplay active">
+        <div id="intro">
+            INTRO<br/>
+            INSTRUCTIONS<br/>
+            TVC<br/>
+            <button type="button" id="btn-start">GET STARTED</button>
+        </div>
+    </div>
+    <div id="output-container">
+
+    </div>
+
+</div>
+
+<script src="js/libs/jquery-min.js"></script>
+<script src="js/libs/getusermedia/getusermedia-min.js"></script>
+<script src="js/libs/MediaStreamRecorder.js"> </script>
+<script src="js/libs/Blob.js"></script>
+<script src="js/libs/FileSaver.js"></script>
+
+<script src="js/intro.js"></script>
+<script src="js/detection.js"></script>
+<script src="js/capture.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
